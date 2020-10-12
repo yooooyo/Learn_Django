@@ -23,6 +23,13 @@ class QuestionAdmin(admin.ModelAdmin):
         ('Date information' ,{'fields':['pub_date']}),
     ]
     list_display = ('question_text','pub_date','was_published_recently')
+    list_filter  = ['pub_date']
+    search_fields = ['question_text']
+    # Change list pagination
+    # search boxes
+    # filters
+    # date-hierarchies
+    # column-header-ordering
     inlines = [ChoiceInline]
     
 
